@@ -1,0 +1,7 @@
+Simple tool to TRIM whole disks or partitions on FreeBSD. Make sure you've
+got a backup or the data isn't needed anymore. Also don't apply this on
+mounted partitions and / or disks, it may panic your kernel. :)
+
+Usage:
+ ./trimdisk <device>
+ 
