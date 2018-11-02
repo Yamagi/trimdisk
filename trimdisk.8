@@ -1,0 +1,24 @@
+.Dd $Mdocdate$
+.Dt TRIMDISK 8
+.Os
+.Sh NAME
+.Nm trimdisk
+.Nd sends TRIM command to every block on the given device
+.Sh SYNOPSIS
+.Nm trimdisk
+.Op Ar device
+.Sh DESCRIPTION
+The
+.Nm
+utility sends a TRIM command to every block on the given device,
+TRIMing the whole device. Depending in the devices controller the
+process may finish nearly instant or take several minutes. After
+the operation finishes some statistics are printed.
+.Sh SEE ALSO
+.Xr camcontrol 8
+.Sh AUTHORS
+.An Yamagi Burmeister
+.Mt yamagi@yamagi.org
+.Sh Bugs
+There's no check if the given device is currently mounted. TRIMing a
+mounted device will likely crash the kernel.
